@@ -9,7 +9,8 @@ public class PeshotController : MonoBehaviour
 
     public bool veritical;
 
-    float timer = 3.0f;
+    float changeTime = 3.0f;
+    float timer;
 
     int direction = 1;
     Rigidbody2D rb;
@@ -20,15 +21,17 @@ public class PeshotController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         veritical = true;
+        timer = changeTime;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer -= Time.deltaTime;
         if (timer < 0)
         {
             direction = -direction;
-
+            timer = changeTime;
         }
     }
 
@@ -42,10 +45,19 @@ public class PeshotController : MonoBehaviour
             //Set animators (later)
         }
         else
-        {   
+        {
             position.x = position.x + Time.deltaTime * speed * direction;
         }
 
         rb.MovePosition(position);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        LanLanController player = other.gameObject.GetComponent<LanLanController>();
+        if (player != null)
+        {
+            player.takeDamage(1);
+        }
     }
 }

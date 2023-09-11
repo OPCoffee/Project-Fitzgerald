@@ -69,7 +69,7 @@ public class LanLanController : MonoBehaviour
         animator.SetTrigger("Swing");
     }
 
-    void takeDamange(int incomingDamage)
+    public void takeDamage(int incomingDamage)
     {
         health -= incomingDamage;
         if (health < 0)

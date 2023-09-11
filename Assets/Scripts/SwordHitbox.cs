@@ -57,9 +57,9 @@ public class SwordHitbox : MonoBehaviour
 
         //Pass direction from parent, change relative psotion with gameObject.transform.localPosition = direction;
     }
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        col.collider.SendMessage("Damage", swordDamage);
+        other.collider.SendMessage("Damage", swordDamage);
     }
 
     public void Yell()
