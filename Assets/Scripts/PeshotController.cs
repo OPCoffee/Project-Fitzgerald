@@ -7,7 +7,7 @@ public class PeshotController : MonoBehaviour
 
     public float speed = 2.0f;
 
-    public bool veritical;
+    public bool vertical;
 
     float changeTime = 3.0f;
     float timer;
@@ -15,13 +15,16 @@ public class PeshotController : MonoBehaviour
     int direction = 1;
     Rigidbody2D rb;
 
+    Animator animator;
+
 
     // Start is called before the first frame update
     void Start() //Change to awake when this becomes a prefab
     {
         rb = GetComponent<Rigidbody2D>();
-        veritical = true;
+        vertical = true;
         timer = changeTime;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,14 +42,17 @@ public class PeshotController : MonoBehaviour
     {
         Vector2 position = rb.position;
 
-        if (veritical)
+        if (vertical)
         {
             position.y = position.y + Time.deltaTime * speed * direction;
-            //Set animators (later)
+            animator.SetFloat("Move X", 0);
+            animator.SetFloat("Move Y", direction);
         }
         else
         {
             position.x = position.x + Time.deltaTime * speed * direction;
+            animator.SetFloat("Move X", direction);
+            animator.SetFloat("Move Y", 0);
         }
 
         rb.MovePosition(position);
@@ -60,4 +66,7 @@ public class PeshotController : MonoBehaviour
             player.takeDamage(1);
         }
     }
+
+    //Implement knockback
+
 }

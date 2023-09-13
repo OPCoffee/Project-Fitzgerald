@@ -9,7 +9,9 @@ public class LanLanController : MonoBehaviour
     //Fields
     Rigidbody2D rb;
     Vector2 direction;
-    public float speed = 2.0f;
+
+    [SerializeField]
+    float speed = 2.0f;
     public int health = 10;
     public int maxHealth = 10;
 
@@ -76,6 +78,9 @@ public class LanLanController : MonoBehaviour
         {
             Debug.Log("LanLan has perished");
         }
+
+
+        Debug.Log("Hit");
     }
 
     public void addHealth(int addHealth)
