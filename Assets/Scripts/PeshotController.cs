@@ -13,6 +13,8 @@ public class PeshotController : MonoBehaviour
     float timer;
 
     int direction = 1;
+    
+    public float healthPoints = 10.0f;
     Rigidbody2D rb;
 
     Animator animator;
@@ -55,7 +57,7 @@ public class PeshotController : MonoBehaviour
             animator.SetFloat("Move Y", 0);
         }
 
-        rb.MovePosition(position);
+        // rb.MovePosition(position);
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -68,5 +70,15 @@ public class PeshotController : MonoBehaviour
     }
 
     //Implement knockback
+    public void Damage(float damage)
+    {
+        healthPoints -= damage;
+
+        if (healthPoints < 0)
+        {
+            Destroy(gameObject);
+        }
+        Debug.Log("Hit Detected " + damage);
+    }
 
 }

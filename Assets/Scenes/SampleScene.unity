@@ -123,6 +123,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &225174787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5077931499327798972, guid: 3c45cff276169b94eac51e0bde8202de, type: 3}
+  m_PrefabInstance: {fileID: 2807276122860767492}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &225174791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225174787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da291d2afec3bdc4e94d3cc351206f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 3
 --- !u!1001 &254645331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2936,7 +2954,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5077931499327798972, guid: 3c45cff276169b94eac51e0bde8202de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 225174791}
   m_SourcePrefab: {fileID: 100100000, guid: 3c45cff276169b94eac51e0bde8202de, type: 3}
 --- !u!1001 &5893839682971341489
 PrefabInstance:
@@ -2952,11 +2973,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2224541618613112794, guid: c9f5c190be47c3e4688b2c9e96aa2316, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.19
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 2224541618613112794, guid: c9f5c190be47c3e4688b2c9e96aa2316, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.86
+      value: -1.84
       objectReference: {fileID: 0}
     - target: {fileID: 2224541618613112794, guid: c9f5c190be47c3e4688b2c9e96aa2316, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3053,6 +3074,10 @@ PrefabInstance:
     - target: {fileID: 7979646445864712750, guid: b0fce5fdf280ee94fb253211bb585df9, type: 3}
       propertyPath: m_Name
       value: Peshot
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979646445864712750, guid: b0fce5fdf280ee94fb253211bb585df9, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8504755129128805842, guid: b0fce5fdf280ee94fb253211bb585df9, type: 3}
       propertyPath: m_BodyType
