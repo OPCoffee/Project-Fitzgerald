@@ -8,4 +8,4 @@ This is a personal project to build a top down, Zelda inspired action-adventure 
 
 - [ ] Implement knockback
 - [ ] Create assets for more types of enemies
-- [ ] Clean up code
+- [ ] Clean up code for hitbox
