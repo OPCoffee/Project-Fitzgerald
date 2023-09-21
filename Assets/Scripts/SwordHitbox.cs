@@ -59,7 +59,7 @@ public class SwordHitbox : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        other.collider.SendMessage("Damage", swordDamage);
+        other.collider.SendMessage("TakeDamage", swordDamage);
         
     }
 

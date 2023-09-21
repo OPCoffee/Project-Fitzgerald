@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Degenerated class that no longer has any functionality due to being delegated to a simple hitbox rather than a sword gameObject
 public class Sword : MonoBehaviour
 {
     // Start is called before the first frame update

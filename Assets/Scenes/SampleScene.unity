@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrust: 3
+  knockTime: 0
 --- !u!1001 &254645331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3077,7 +3078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7979646445864712750, guid: b0fce5fdf280ee94fb253211bb585df9, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8504755129128805842, guid: b0fce5fdf280ee94fb253211bb585df9, type: 3}
       propertyPath: m_BodyType

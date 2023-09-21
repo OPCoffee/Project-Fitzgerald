@@ -9,8 +9,6 @@ public class LanLanController : MonoBehaviour
     //Fields
     Rigidbody2D rb;
     Vector2 direction;
-
-    [SerializeField]
     float speed = 2.0f;
     public int health = 10;
     public int maxHealth = 10;
